@@ -82,8 +82,7 @@ CREATE TABLE `xtransam_translator` (
 	`hexval_translation` MEDIUMTEXT,                     
 	`replacestr` MEDIUMTEXT,                             
 	`out` ENUM('1','0') DEFAULT '0',                     
-	`line` INT(12) DEFAULT '0',      
-	`auto` TINYINT(2) DEFAULT '0', 
+	`line` INT(12) DEFAULT '0',                          
 	PRIMARY KEY (`id`)                                   
 )  ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
