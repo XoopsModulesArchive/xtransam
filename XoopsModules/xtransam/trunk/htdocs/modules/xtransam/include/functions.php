@@ -30,7 +30,7 @@ if (!function_exists("adminMenu")) {
   function adminMenu ($currentoption = 0)  {
 	  /* Nice buttons styles */
 		global $xoopsConfig,$xoopsModule;
-		$module_handler =& xoops_getmodulehandler('module','multisite');
+		$module_handler =& xoops_gethandler('module');
 		$xoopsModule = $module_handler->getByDirname('xtransam');
 	    $dirname=$xoopsModule->getVar('dirname');
 	    echo "
