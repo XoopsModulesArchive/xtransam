@@ -24,6 +24,8 @@
 //  along with this program; if not, write to the Free Software              //
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
+//  --  Author: Simon Roberts (simon@chronolabs.org.au)                   -- //
+//  ------------------------------------------------------------------------ //
 
 if (!defined('XOOPS_ROOT_PATH')) {
 	exit();
@@ -34,17 +36,12 @@ if (!defined('XOOPS_ROOT_PATH')) {
  * @copyright copyright (c) 2009-2003 XOOPS.org
  * @package kernel
  */
-class XtransamLanguages extends XoopsObject
+class XtransamGoogleprovider extends XoopsObject
 {
 
-    function XtransamLanguages($id = null)
+    function XtransamGoogleprovider($id = null)
     {
-        $this->initVar('lang_id', XOBJ_DTYPE_INT, null, false);
-        $this->initVar('provider', XOBJ_DTYPE_TXTBOX, null, false, 20);
-        $this->initVar('name', XOBJ_DTYPE_TXTBOX, null, true, 255);
-        $this->initVar('code', XOBJ_DTYPE_TXTBOX, null, true, 6);
-        $this->initVar('foldername', XOBJ_DTYPE_TXTBOX, null, false, 255);
-
+								
     }
 
 }
@@ -58,75 +55,66 @@ class XtransamLanguages extends XoopsObject
 * @author  Simon Roberts <simon@chronolabs.org.au>
 * @package kernel
 */
-class XtransamLanguagesHandler extends XoopsPersistableObjectHandler
+class XtransamGoogleproviderHandler extends XoopsPersistableObjectHandler
 {
+
+	var $url = "http://ajax.googleapis.com/ajax/services/language/translate";
+	var $retrieve = array('start' => '<textarea name=utrans wrap=SOFT dir="ltr" rows=5 id=suggestion>',
+						  'end' => '</textarea>');
+	
     function __construct(&$db) 
-    {
-        parent::__construct($db, "xtransam_languages", 'XtransamLanguages', "lang_id", "name");
-    }
+    { }
 	
-	function name($id)
+	function translate($fromcode, $tocode, $hexvalue)
 	{
-		if ($this->getCount(new Criteria('lang_id', $id))>0)
-		{
-			$objs = $this->getObjects(new Criteria('lang_id', $id), false, false );
-			return $objs[0]['name'];
-		} else {
-			return false;
+		
+		$response = $this->send_post($this->url, $this->hex2bin($hexvalue), $fromcode, $tocode, XOOPS_URL);
+		if (preg_match("/{\"translatedText\":\"([^\"]+)\"/i", $response, $matches)) {
+			return self::_unescapeUTF8EscapeSeq($this->clean($matches[1]));
 		}
 	}
 
-	function provider($id)
-	{
-		if ($this->getCount(new Criteria('lang_id', $id))>0)
-		{
-			$objs = $this->getObjects(new Criteria('lang_id', $id), false, false );
-			return $objs[0]['provider'];
-		} else {
-			return false;
-		}
-	}
-	
-	function folder($id)
-	{
-		if ($this->getCount(new Criteria('lang_id', $id))>0)
-		{
-			$objs = $this->getObjects(new Criteria('lang_id', $id), false, false );
-			if (empty($objs[0]['foldername']))
-				return strtolower($objs[0]['name']);
-			else
-				return strtolower($objs[0]['foldername']);
-				
-		} else {
-			return false;
-		}
-	}
-	
-	function code($id)
-	{
-		if ($this->getCount(new Criteria('lang_id', $id))>0)
-		{
-			$objs = $this->getObjects(new Criteria('lang_id', $id), false, false);
-			return $objs[0]['code'];
-		} else {
-			return false;
-		}
+	private function _unescapeUTF8EscapeSeq($str) {
+		return preg_replace_callback("/\\\u([0-9a-f]{4})/i", create_function('$matches', 'return html_entity_decode(\'&#x\'.$matches[1].\';\', ENT_NOQUOTES, \'UTF-8\');'), $str);
 	}
 
-	function validlanguage($name)
-	{
-		include_once(XOOPS_ROOT_PATH.'/class/criteria.php');
-		$criteria = new CriteriaCompo(new Criteria('`name`', $name, 'LIKE'), 'OR');
-		$criteria->add(new Criteria('`foldername`', $name, 'LIKE'), 'OR');
-		if ($this->getCount($criteria)>0)
-		{
-			$objs = $this->getObjects($criteria);
-			return $objs[0]->getVar('lang_id');
-		} else {
-			return false;
-		}
+	private function hex2bin($h)
+	  {
+		  if (!is_string($h)) return null;
+		  $r='';
+		  for ($a=0; $a<strlen($h); $a+=2) { $r.=chr(hexdec($h{$a}.$h{($a+1)})); }
+		  return $r;
+	  }	
 	
+	private	function clean($var)
+	{
+		$var = htmlspecialchars_decode($var);
+		$var = str_replace('% s', ' %s ', $var);
+		$var = str_replace('% u', ' %u ', $var);
+		$var = str_replace('% d', ' %d ', $var);
+		if (strpos($var, 'text/css'))
+			$var ='';
+		return $var;
 	}
 	
+	function send_post($url, $text, $from, $to, $referer = null)
+	{
+		$langpair = $from.'|'.$to;
+		$text = $text;
+		
+		$params = array('http' =>
+					  array(
+					  'method' => 'POST',
+					  'header'=>"Content-Type: application/x-www-form-urlencoded\r\n".
+								"Referer: $referer\r\n",
+					  "content"=> http_build_query(array('langpair'=>$langpair, 'q'=>$text, 'v'=>'1.0'))
+					  )
+				   );
+		 $ctx = stream_context_create($params);
+		 $fp = fopen($url, 'rb', false, $ctx);
+		 $response = stream_get_contents($fp);
+		
+		 return $response;
+	}
 }
 ?>
