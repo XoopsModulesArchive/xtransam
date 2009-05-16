@@ -28,7 +28,7 @@
 //  ------------------------------------------------------------------------ //
 
 $modversion['name'] = _XV_XTRANSAM_NAME;
-$modversion['version'] = 1.02;
+$modversion['version'] = 1.01;
 $modversion['description'] = _XV_XTRANSAM_DESC;
 $modversion['author'] = "Wishcraft";
 $modversion['credits'] = "The XOOPS Project";
