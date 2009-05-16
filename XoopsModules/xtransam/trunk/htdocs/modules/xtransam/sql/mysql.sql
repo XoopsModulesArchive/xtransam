@@ -1,11 +1,13 @@
 
-CREATE TABLE `xtransam_files` (
-  `id` int(12) unsigned NOT NULL AUTO_INCREMENT,
-  `filename` varchar(255) DEFAULT NULL,
-  `path` varchar(255) DEFAULT NULL,
-  `imported` smallint(6) DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE `xtransam_files` (                    
+  `id` INT(12) UNSIGNED NOT NULL AUTO_INCREMENT,        
+  `ioid` INT(12) UNSIGNED DEFAULT '0',                  
+  `filename` VARCHAR(255) DEFAULT NULL,                 
+  `path` VARCHAR(255) DEFAULT NULL,                     
+  `imported` TINYINT(2) DEFAULT '0',                    
+  PRIMARY KEY (`id`)                                    
+) ENGINE=MYISAM CHARSET=utf8;
+
 
 CREATE TABLE `xtransam_iobase` (
   `id` int(12) unsigned NOT NULL AUTO_INCREMENT,
