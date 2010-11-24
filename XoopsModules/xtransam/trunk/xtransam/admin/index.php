@@ -112,8 +112,9 @@ case "export":
 			if (strtolower($value) == strtolower($from_folder)) {
 				$path[$key] = $to_folder;
 			}
-
+			
 		$wpath = implode('/', $path).'/';
+		mkdir($wpath, 0777);
 		
 		if($wpath!=$file->getVar('path')){
 			$bfile = file($file->getVar('path').$file->getVar('filename'));
