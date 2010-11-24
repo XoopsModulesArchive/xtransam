@@ -1,8 +1,8 @@
 <?php
-// $Autho: wishcraft $
+// $Id: update.php 2 2005-11-02 18:23:29Z skalpa $
 //  ------------------------------------------------------------------------ //
 //                XOOPS - PHP Content Management System                      //
-//                    Copyright (c) 2009 XOOPS.org                           //
+//                    Copyright (c) 2000 XOOPS.org                           //
 //                       <http://www.xoops.org/>                             //
 //  ------------------------------------------------------------------------ //
 //  This program is free software; you can redistribute it and/or modify     //
@@ -24,19 +24,19 @@
 //  along with this program; if not, write to the Free Software              //
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
-//  --  Author: Simon Roberts (simon@chronolabs.org.au)                   -- //
-//  ------------------------------------------------------------------------ //
-	define('_XV_XTRANSAM_NAME', 'L-Translator');
-	define('_XV_XTRANSAM_DESC', 'L-Translator is used to translate language file in xoops.<br><em>Written in memory of John Miller (Microsoft Australia)</em>');	
-	
-	define('_MI_XTRANSAM_ADMENU1', 'Translation Wizard');
-	define('_MI_XTRANSAM_ADMENU2', 'Do Translation');	
-	define('_MI_XTRANSAM_ADMENU3', 'Language Matrix');	
-	
-	define('_XTL_STORE_METHOD', 'Storage Method');
-	define('_XTL_STORE_METHODDESC', 'This is the Method used with Database to store the language');	
-	
-	define('_XTL_GOOGLE_APIKEY', 'Your API Key for Google Maps');
-	define('_XTL_GOOGLE_APIKEYDESC', 'This is your API Key for Google API you can get one from <a href="https://code.google.com/apis/console/?api=translate&pli=1#welcome">google api signup</a>');
-	
+// Author: Kazumi Ono (AKA onokazu)                                          //
+// URL: http://www.myweb.ne.jp/, http://www.xoops.org/, http://jp.xoops.org/ //
+// Project: The XOOPS Project                                                //
+// ------------------------------------------------------------------------- //
+
+function xoops_module_update_xtransam(&$module) {
+	global $xoopsDB;
+	$result = $xoopsDB->queryF("ALTER TABLE ".$xoopsDB->prefix('xtransam_files')." ADD COLUMN(ioid int(12))");	
+	$result = $xoopsDB->queryF("ALTER TABLE ".$xoopsDB->prefix('xtransam_translator')." ADD COLUMN(`sm` ENUM('urlcode','uucode','base64','hex','open') DEFAULT 'urlcode')");	
+	$result = $xoopsDB->queryF("ALTER TABLE ".$xoopsDB->prefix('xtransam_translator')." CHANGE COLUMN `hexval_name` `name` MEDIUMTEXT");
+	$result = $xoopsDB->queryF("ALTER TABLE ".$xoopsDB->prefix('xtransam_translator')." CHANGE COLUMN `hexval_orginal` `orginal` MEDIUMTEXT");
+	$result = $xoopsDB->queryF("ALTER TABLE ".$xoopsDB->prefix('xtransam_translator')." CHANGE COLUMN `hexval_translation` `translation` MEDIUMTEXT");
+    return true;
+}
+
 ?>

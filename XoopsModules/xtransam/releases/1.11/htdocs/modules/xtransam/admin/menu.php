@@ -26,17 +26,14 @@
 //  ------------------------------------------------------------------------ //
 //  --  Author: Simon Roberts (simon@chronolabs.org.au)                   -- //
 //  ------------------------------------------------------------------------ //
-	define('_XV_XTRANSAM_NAME', 'L-Translator');
-	define('_XV_XTRANSAM_DESC', 'L-Translator is used to translate language file in xoops.<br><em>Written in memory of John Miller (Microsoft Australia)</em>');	
-	
-	define('_MI_XTRANSAM_ADMENU1', 'Translation Wizard');
-	define('_MI_XTRANSAM_ADMENU2', 'Do Translation');	
-	define('_MI_XTRANSAM_ADMENU3', 'Language Matrix');	
-	
-	define('_XTL_STORE_METHOD', 'Storage Method');
-	define('_XTL_STORE_METHODDESC', 'This is the Method used with Database to store the language');	
-	
-	define('_XTL_GOOGLE_APIKEY', 'Your API Key for Google Maps');
-	define('_XTL_GOOGLE_APIKEYDESC', 'This is your API Key for Google API you can get one from <a href="https://code.google.com/apis/console/?api=translate&pli=1#welcome">google api signup</a>');
-	
+
+$adminmenu[1]['title'] = _MI_XTRANSAM_ADMENU1;
+$adminmenu[1]['link'] = "admin/index.php?op=wizard";
+$adminmenu[1]['icon'] = "images/wizard.png";
+$adminmenu[2]['title'] = _MI_XTRANSAM_ADMENU2;
+$adminmenu[2]['link'] = "admin/index.php?op=bbs";
+$adminmenu[2]['icon'] = "images/translations.png";
+$adminmenu[3]['title'] = _MI_XTRANSAM_ADMENU3;
+$adminmenu[3]['link'] = "admin/index.php?op=languages";
+$adminmenu[3]['icon'] = "images/languages.png";
 ?>

@@ -26,17 +26,25 @@
 //  ------------------------------------------------------------------------ //
 //  --  Author: Simon Roberts (simon@chronolabs.org.au)                   -- //
 //  ------------------------------------------------------------------------ //
-	define('_XV_XTRANSAM_NAME', 'L-Translator');
-	define('_XV_XTRANSAM_DESC', 'L-Translator is used to translate language file in xoops.<br><em>Written in memory of John Miller (Microsoft Australia)</em>');	
+ error_reporting(E_ALL);
+include '../../../mainfile.php';
+include '../../../include/cp_header.php';
+include '../include/functions.php';
+
+include_once XOOPS_ROOT_PATH . '/class/xoopstree.php';
+include_once XOOPS_ROOT_PATH . '/class/xoopslists.php';
+include_once XOOPS_ROOT_PATH . '/class/xoopsformloader.php';
 	
-	define('_MI_XTRANSAM_ADMENU1', 'Translation Wizard');
-	define('_MI_XTRANSAM_ADMENU2', 'Do Translation');	
-	define('_MI_XTRANSAM_ADMENU3', 'Language Matrix');	
-	
-	define('_XTL_STORE_METHOD', 'Storage Method');
-	define('_XTL_STORE_METHODDESC', 'This is the Method used with Database to store the language');	
-	
-	define('_XTL_GOOGLE_APIKEY', 'Your API Key for Google Maps');
-	define('_XTL_GOOGLE_APIKEYDESC', 'This is your API Key for Google API you can get one from <a href="https://code.google.com/apis/console/?api=translate&pli=1#welcome">google api signup</a>');
-	
+if (is_object($xoopsUser)) {
+    $xoopsModule = XoopsModule::getByDirname('xtransam');
+    if (!$xoopsUser->isAdmin($xoopsModule->mid())) {
+        redirect_header(XOOPS_URL . "/", 3, _NOPERM);
+        exit();
+    } 
+} else {
+    redirect_header(XOOPS_URL . "/", 1, _NOPERM);
+    exit();
+}
+$myts = &MyTextSanitizer::getInstance();
+error_reporting(E_ALL);
 ?>
