@@ -27,49 +27,48 @@
 //  --  Author: Simon Roberts (simon@chronolabs.org.au)                   -- //
 //  ------------------------------------------------------------------------ //
 
-	define('_AM_XTRANSAM_IODELETED', 'Translation Preset Deleted');
-	define('_AM_XTRANSAM_IOSAVEFAIL', 'Translation Matrix Save Failed');
-	define('_AM_XTRANSAM_IOSAVEGOOD', 'Translation Matrix Save Successful');	
-	define('_AM_XTRANSAM_IOEXISTS', 'Translation Matrix Exists');		
-	define('_AM_XTRANSAM_SELECTLANGUAGE', 'Select the language conversion type');
-	define('_AM_XTRANSAM_SELECTLANGFROM', 'Language to Translate from');	
-	define('_AM_XTRANSAM_SELECTLANGTO', 'Language to Translate to');		
-	define('_AM_XTRANSAM_SELECTMODULEPATH', 'Select Module');
-	define('_AM_XTRANSAM_SELECTPATH', 'System Path');	
-	define('_AM_XTRANSAM_SELECTBASEPATH', 'Select base path you would like to work from.');				
-	define('_AM_XTRANSAM_SELECTPOINTMODE', 'Select your mode you wish to work within.');					
-	define('_AM_XTRANSAM_SELECTPOINT', 'Select Mode');						
-	define('_AM_XTRANSAM_TRANSLATIONBUFFER', 'Translation Buffer');
-	define('_AM_XTRANSAM_CHECKTRANSLATE', 'Translate:');
-	define('_AM_XTRANSAM_LABELTRANSLATEPOINT', 'Point:');
-	define('_AM_XTRANSAM_LABELTRANSLATEFROM', 'Translate from:');	
-	define('_AM_XTRANSAM_LABELTRANSLATETO', 'Translate to:');		
-	define('_AM_XTRANSAM_LABELTRANSLATEPATH', 'Path:');
-	define('_AM_XTRANSAM_CODE', 'Language Code:');
-	define('_AM_XTRANSAM_FOLDER', 'Folder Name:');
-	define('_AM_XTRANSAM_NAME', 'Name:');	
-	define('_AM_XTRANSAM_PROVIDER', 'Provider:');
-	define('_AM_XTRANSAM_NEWLANG', 'Create new Language:');
-	define('_AM_XTRANSAM_LANGUAGEMATRIX', 'Language Matrix');
-	define('_AM_XTRANSAM_ANALYSIS', 'File Base Analysis');
-	define('_AM_XTRANSAM_IMPORT', 'Import File Base');	
-	define('_AM_XTRANSAM_TRANSLATE', 'Auto Translate');	
-	define('_AM_XTRANSAM_TRANSMANAGER', 'Edit/Manage Translation');
-	define('_AM_XTRANSAM_EXPORT', 'Build File Base');
-	define('_AM_XTRANSAM_LANGSAVEOK', 'Saving language matrix is great!');
-	define('_AM_XTRANSAM_SELECTNUMBERTODO', 'Number of lines to process before status update');
-	define('_AM_XTRANSAM_30SECONDSCONTINUING', 'It has been nearly 30 Seconds of Execution!<br/><br/> This is timer startup number %u<br/>The process will be finished soon!');
-	define('_AM_XTRANSAM_TRANSLATIONCOMPLETE', 'Automatic Translation Complete (Please check)');
-	define('_AM_XTRANSAM_IMPORTCOMPLETE', 'Importing of the defines complete!');
-	define('_AM_XTRANSAM_ANLYSISCOMPLETE', 'File base analysis completed succsssfully!');
-	define('_AM_XTRANSAM_TRANSLATIONEDITOR', 'Edit translation from %s to %s');
-	define('_AM_XTRANSAM_SELECTFILETOEDIT', 'Select file in translation');
-	define('_AM_XTRANSAM_SAVECOMPLETE', 'Saving of translation page finished!');
-    
-    define('_AM_XTRANSAM_ADMIN_NUMTRASL', 'Translation Dashboard');
-    define('_AM_XTRANSAM_THEREARE_NUMTRASL', 'Number of Translations:');    
-    
-    
-    
+  define("_AM_XTRANSAM_IODELETED", "Preset Traduzione eliminato");
+  define("_AM_XTRANSAM_IOSAVEFAIL", "Salva Matrice Traduzione non riuscita");
+  define("_AM_XTRANSAM_IOSAVEGOOD", "Matrice Traduzione Salvata con successo");
+  define("_AM_XTRANSAM_IOEXISTS", "La Traduzione Matrice esiste");
+  define("_AM_XTRANSAM_SELECTLANGUAGE", "Seleziona il tipo di linguaggio da convertire");
+  define("_AM_XTRANSAM_SELECTLANGFROM", "Lingua per tradurre da"); 
+  define("_AM_XTRANSAM_SELECTLANGTO", "Lingua per tradurre in");  
+  define("_AM_XTRANSAM_SELECTMODULEPATH", "Selezionare il modulo");
+  define("_AM_XTRANSAM_SELECTPATH", "System Path"); 
+  define("_AM_XTRANSAM_SELECTBASEPATH", "Selezionare percorso base che si desidera lavorare.");    
+  define("_AM_XTRANSAM_SELECTPOINTMODE", "Seleziona il tuo modo di cui si desidera lavorare all&#39;interno.");     
+  define("_AM_XTRANSAM_SELECTPOINT", "Selezione della modalit&#224;");      
+  define("_AM_XTRANSAM_TRANSLATIONBUFFER", "Buffer Traduzione");
+  define("_AM_XTRANSAM_CHECKTRANSLATE", "Traduci:");
+  define("_AM_XTRANSAM_LABELTRANSLATEPOINT", "Point:");
+  define("_AM_XTRANSAM_LABELTRANSLATEFROM", "Traduci da:"); 
+  define("_AM_XTRANSAM_LABELTRANSLATETO", "Traduci in:");  
+  define("_AM_XTRANSAM_LABELTRANSLATEPATH", "Percorso:");
+  define("_AM_XTRANSAM_CODE", "Codice Lingua:");
+  define("_AM_XTRANSAM_FOLDER", "Nome cartella:");
+  define("_AM_XTRANSAM_NAME", "Nome:"); 
+  define("_AM_XTRANSAM_PROVIDER", "Provider:");
+  define("_AM_XTRANSAM_NEWLANG", "Crea nuova lingua:");
+  define("_AM_XTRANSAM_LANGUAGEMATRIX", "Matrice Lingua");
+  define("_AM_XTRANSAM_ANALYSIS", "File di base di analisi");
+  define("_AM_XTRANSAM_IMPORT", "Importa file di base"); 
+  define("_AM_XTRANSAM_TRANSLATE", "Auto Traduci");
+  define("_AM_XTRANSAM_TRANSMANAGER", "Modifica/Gestione Traduzione");
+  define("_AM_XTRANSAM_EXPORT", "Genera file di base");
+  define("_AM_XTRANSAM_LANGSAVEOK", "Salvataggio matrice lingua buono!");
+  define("_AM_XTRANSAM_SELECTNUMBERTODO", "Numero di linee di processo prima di aggiornare lo stato");
+  define("_AM_XTRANSAM_30SECONDSCONTINUING", "Sono passati quasi 30 secondi di esecuzione! <br /><br /> Questo &#232; l&#39;avvio del timer numero %u  <br /> Il processo sar&#224; finito presto!");  
+  define("_AM_XTRANSAM_TRANSLATIONCOMPLETE", "Traduzione automatica completa (Si prega di verificare)") ;
+  define("_AM_XTRANSAM_IMPORTCOMPLETE", "Importazione dei definisce completo!");
+  define("_AM_XTRANSAM_ANLYSISCOMPLETE", "File di base di analisi completata con successo!");
+  define("_AM_XTRANSAM_TRANSLATIONEDITOR", "Modifica traduzione da %s in %s ");
+  define("_AM_XTRANSAM_SELECTFILETOEDIT", "Seleziona il file di traduzione");
+  define("_AM_XTRANSAM_SAVECOMPLETE", "Risparmio di pagina traduzione finito!");
+  
+  // Index 1.12 by (Timgno)
+  define("_AM_XTRANSAM_ADMIN_NUMTRASL", "Quantit&#224; Traduzioni");
+  define("_AM_XTRANSAM_THEREARE_NUMTRASL","Ci sono <span class='red bold'>%s</span> Traduzioni salva te nel Database");
+
 
 ?>

@@ -65,5 +65,9 @@
 	define('_AM_XTRANSAM_TRANSLATIONEDITOR', 'Edit translation from %s to %s');
 	define('_AM_XTRANSAM_SELECTFILETOEDIT', 'Select file in translation');
 	define('_AM_XTRANSAM_SAVECOMPLETE', 'Saving of translation page finished!');
+    
+      // Index 1.12 by (Timgno)
+  define("_AM_XTRANSAM_ADMIN_NUMTRASL", "Number of Translations");
+  define("_AM_XTRANSAM_THEREARE_NUMTRASL","There are <span class='red bold'>%s</span> Translations in the Database");
 
 ?>
