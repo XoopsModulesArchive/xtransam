@@ -28,20 +28,42 @@
 //  ------------------------------------------------------------------------ //
 //  --  Author: Simon Roberts (simon@chronolabs.org.au)                   -- //
 //  ------------------------------------------------------------------------ //
-	define("_XV_XTRANSAM_NAME", "L-Traduttore");
-	define("_XV_XTRANSAM_DESC", "L-Translator &#232; utilizzato per tradurre file di lingua in XOOPS. <br> <em>Scritto in memoria di John Miller (Microsoft Italia)</em>");	
+	define("_MI_XTRANSAM_XTRANSAM_NAME", "L-Traduttore");
+	define("_MI_XTRANSAM_XTRANSAM_DESC", "L-Translator &#232; utilizzato per tradurre file di lingua in XOOPS. <br> <em>Scritto in memoria di John Milner (Microsoft Australia)</em>");	
 	
 	// Menu 1.12 by (Timgno)
-    define("_MI_XTRANSAM_ADMENU1", "Home");
+    define("_MI_XTRANSAM_ADMENU1", "Cruscotto");
 	define("_MI_XTRANSAM_ADMENU2", "Traduzione guidata");
 	define("_MI_XTRANSAM_ADMENU3", "Fai la traduzione");
 	define("_MI_XTRANSAM_ADMENU4", "Matrice Lingua");
-	define("_MI_XTRANSAM_ADMENU5", "About");	
+	define("_MI_XTRANSAM_ADMENU5", "Circa");	
 	
-	define("_XTL_STORE_METHOD", "Metodo di immagazzinaggio");
-	define("_XTL_STORE_METHODDESC", "Questo &#232; il metodo usato con i database per memorizzare la lingua");	
+	//Preferences
+	define("_MI_XTRANSAM_STORE_METHOD", "Metodo di immagazzinaggio");
+	define("_MI_XTRANSAM_STORE_METHOD_DESC", "Questo &#232; il metodo usato con i database per memorizzare la lingua");	
+	define('_MI_XTRANSAM_STORE_METHOD_URLENCODE', 'URL Codice metodo store');
+	define('_MI_XTRANSAM_STORE_METHOD_UUCODE', 'UU Codice Conservare Metodo');
+	define('_MI_XTRANSAM_STORE_METHOD_BASE64', 'Codice base64 Metodo Conservare');
+	define('_MI_XTRANSAM_STORE_METHOD_HEX', 'Conservare Metodo esadecimale');
+	define('_MI_XTRANSAM_STORE_METHOD_OPEN', 'Conservare metodo aperto');
+	define('_MI_XTRANSAM_PROVIDER', 'Traduzione provider da utilizzare');
+	define('_MI_XTRANSAM_PROVIDER_DESC', 'Si tratta di un'opzione fornitore di traduzione in cui è possibile selezionare l'API e il metodo da usare');
+	define('_MI_XTRANSAM_PROVIDER_REST_GOOGLE', 'REST API di Google di accesso');
+	define('_MI_XTRANSAM_PROVIDER_OAUTH2_GOOGLE', 'OAuth 2,0 API di Google di accesso');
+	define('_MI_XTRANSAM_PROVIDER_REST_MYMEMORY', 'MyMemory traduzione API');	
+	define("_MI_XTRANSAM_GOOGLE_APIKEY", "La tua chiave API di Google Maps");
+	define("_MI_XTRANSAM_GOOGLE_APIKEY_DESC", "Questa &#232; la tua chiave API di Google per le API &#232; possibile ottenere uno da <a href='https://code.google.com/apis/console/?api=translate&pli=1#welcome' target='_blank'>google api signup</a>");
+	define('_MI_XTRANSAM_GOOGLE_CHAR_SECONDS', 'I tuoi personaggi per utente al secondo su Google Traduttore Lingua API');
+	define('_MI_XTRANSAM_GOOGLE_CHAR_SECONDS_DESC', 'Questo è il numero di caratteri vostro \'Per-User Limit\' è impostato su: <a href="https://code.google.com/apis/console/?api=translate&pli=1" target="_blank">informazioni sulle quote di google </a>');
+	define('_MI_XTRANSAM_GOOGLE_CHAR_DAY', 'I tuoi personaggi limite di cortesia al giorno su Google Traduttore Lingua API');
+	define('_MI_XTRANSAM_GOOGLE_CHAR_DAY_DESC', 'o è il numero di caratteri \'Limite di cortesia\' tuo è impostato su: <a href="https://code.google.com/apis/console/?api=translate&pli=1" target="_blank">informazioni sulle quote di google </a>');
+	define('_MI_XTRANSAM_PHP_EXECUTE_FOR', 'Numero di secondi uno script PHP in questo modulo verranno eseguiti per!');
+	define('_MI_XTRANSAM_PHP_EXECUTE_FOR_DESC', 'Questo è il numero totale di secondi uno script PHP in questo modulo verrà eseguito per!');
+	define('_MI_XTRANSAM_WAIT_IN_CASE', 'Secondi di attesa per lo slot limite per aprire');
+	define('_MI_XTRANSAM_WAIT_IN_CASE_DESC', 'Questo è il numero di secondi la routine traduzione aspetterà di vedere se si aprirà uno slot per ulteriori traduzione.');
+	define('_MI_XTRANSAM_MICROTIME_SECONDS_DIFF', 'Differenza secondi per il bilanciamento di slot');
+	define('_MI_XTRANSAM_MICROTIME_SECONDS_DIFF_DESC', 'Questo è il numero di secondi per una differenza elemento della cache storico con limitazione di CompAir essere quello per la rimozione e l\'apertura di uno slot traduzione sulla seconda limiti secondo');
+	define('_MI_XTRANSAM_MICROTIME_DAY_DIFF', 'Secondi in un giorno per il bilanciamento differenza di slot');
+	define('_MI_XTRANSAM_MICROTIME_DAY_DIFF_DESC', 'Questo è il numero di secondi per una differenza elemento della cache storico con limitazione di CompAir essere quello per la rimozione e l\'apertura di uno slot di traduzione su limiti giornalieri');
 	
-	define("_XTL_GOOGLE_APIKEY", "La tua chiave API di Google Maps");
-	define("_XTL_GOOGLE_APIKEYDESC", "Questa &#232; la tua chiave API di Google per le API &#232; possibile ottenere uno da <a href='https://code.google.com/apis/console/?api=translate&pli=1#welcome' target='_blank'>google api signup</a>");
-
 ?>
