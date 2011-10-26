@@ -27,7 +27,7 @@
 //  --  Author: Simon Roberts (simon@chronolabs.org.au)                   -- //
 //  ------------------------------------------------------------------------ //
 
-include_once(dirname(dirname(dirname(dirname(__FILE__)))).'mainfile.php');
+include_once (dirname(dirname(dirname(dirname(__FILE__)))). DIRECTORY_SEPARATOR .'mainfile.php');
 include_once(dirname(dirname(dirname(dirname(__FILE__)))).DIRECTORY_SEPARATOR.'include'.DIRECTORY_SEPARATOR.'cp_header.php');
 
 $GLOBALS['myts'] = MyTextSanitizer::getInstance();

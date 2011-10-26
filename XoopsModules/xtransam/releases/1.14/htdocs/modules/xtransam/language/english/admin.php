@@ -65,6 +65,10 @@
 	define('_AM_XTRANSAM_TRANSLATIONEDITOR', 'Edit translation from %s to %s');
 	define('_AM_XTRANSAM_SELECTFILETOEDIT', 'Select file in translation');
 	define('_AM_XTRANSAM_SAVECOMPLETE', 'Saving of translation page finished!');
-	define('_AM_XTRANSAM_TRANSLATION_IN_PROCESS', '<center><font style="font-size:2.5em;">Translation In Progress</font><br/><br/>It will be approximately %s Seconds of Execution!<br/><br/> This is timer startup number %u<br/>The process will be finished soon!<br/><br/></center>');
+
+      // Index 1.12 by (Timgno)
+  define("_AM_XTRANSAM_ADMIN_NUMTRASL", "Number of Translations");
+  define("_AM_XTRANSAM_THEREARE_NUMTRASL","There are <span class='red bold'>%s</span> Translations in the Database");
+  define('_AM_XTRANSAM_TRANSLATION_IN_PROCESS', '<center><font style="font-size:2.5em;">Translation In Progress</font><br/><br/>It will be approximately %s Seconds of Execution!<br/><br/> This is timer startup number %u<br/>The process will be finished soon!<br/><br/></center>');
 
 ?>

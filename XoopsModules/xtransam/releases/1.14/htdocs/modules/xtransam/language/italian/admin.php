@@ -70,4 +70,5 @@
 	// Index 1.12 by (Timgno)
 	define("_AM_XTRANSAM_ADMIN_NUMTRASL", "Quantit&#224; Traduzioni");
     define("_AM_XTRANSAM_THEREARE_NUMTRASL","Ci sono <span class='red bold'>%s</span> Traduzioni salvate nel Database");
+    define('_AM_XTRANSAM_TRANSLATION_IN_PROCESS', '<center><font style="font-size:2.5em;">Translation In Progress</font><br/><br/>It will be approximately %s Seconds of Execution!<br/><br/> This is timer startup number %u<br/>The process will be finished soon!<br/><br/></center>');
 ?>
