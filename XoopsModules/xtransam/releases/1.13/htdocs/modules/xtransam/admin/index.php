@@ -50,7 +50,7 @@ global $xoopsDB, $xoopsModuleConfig;
 
 ini_set("max_execution_time", "300");  
 
-$op = (isset($_GET['op']))? $_GET['op'] : "";
+//$op = (isset($_GET['op']))? $_GET['op'] : "";
 
 switch ($op){
 case "deletebuffer":
