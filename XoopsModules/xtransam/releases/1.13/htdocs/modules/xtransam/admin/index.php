@@ -50,6 +50,8 @@ global $xoopsDB, $xoopsModuleConfig;
 
 ini_set("max_execution_time", "300");  
 
+$op = (isset($_GET['op']))? $_GET['op'] : "";
+
 switch ($op){
 case "deletebuffer":
 	$sql[0] = "DELETE FROM ".$xoopsDB->prefix('xtransam_files')." WHERE ioid = $id";
@@ -260,7 +262,8 @@ case "wizard":
 	translationForm_display(true);
     include "admin_footer.php";
 	break;    
-default:
+case "default":
+    default:
 	
     xoops_cp_header();
     

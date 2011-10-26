@@ -27,8 +27,8 @@
 //  --  Author: Simon Roberts (simon@chronolabs.org.au)                   -- //
 //  ------------------------------------------------------------------------ //
 
-include_once(dirname(dirname(dirname(dirname(__FILE__)))).'mainfile.php');
-include_once(dirname(dirname(dirname(dirname(__FILE__)))).DIRECTORY_SEPARATOR.'include'.DIRECTORY_SEPARATOR.'cp_header.php');
+include_once (dirname(dirname(dirname(dirname(__FILE__)))). DIRECTORY_SEPARATOR .'mainfile.php');
+include_once (dirname(dirname(dirname(dirname(__FILE__)))).DIRECTORY_SEPARATOR.'include'.DIRECTORY_SEPARATOR.'cp_header.php');
 
 $GLOBALS['myts'] = MyTextSanitizer::getInstance();
 
@@ -37,7 +37,7 @@ $config_handler = xoops_gethandler('config');
 $GLOBALS['xoopsModule'] = $module_handler->getByDirname('xtransam');
 $GLOBALS['xoopsModuleConfig'] = $config_handler->getConfigList($GLOBALS['xoopsModule']->getVar('mid')); 
 
-set_time_limit($GLOBAL['xoopsModuleConfig']['php_execute_for']);
+set_time_limit($GLOBALS['xoopsModuleConfig']['php_execute_for']);
 
 xoops_load('pagenav');	
 xoops_load('xoopsmailer');
