@@ -115,16 +115,16 @@ case "export":
 				// Changed by Chronolabs
 				foreach($GLOBALS['charset_utf8'] as $search => $replace)
 			    	$translation = str_replace($search, $replace, $translation);
-			    $replace = 'define("'.$name.'", "'.$translation.'");';
-				$bfile[$tran->getVar('line')] = str_replace($search, $replace, $bfile[$tran->getVar('line')]);	
+			    $replace = 'define("'.$name.'", "'.$translation.'");'."\n";
+				$bfile[$tran->getVar('line')] = $replace;	
 			}
 			// Changed by Chronolabs back to Footer
-            $bfile[] = "\n\n// Translation done by XTransam & ".$GLOBALS['xoopsUser']->getVar('uname')." (".$GLOBALS['xoopsUser']->getVar('email').")\n// XTransam ".($GLOBALS['xoopsModule']->getVar('version')/100)." is written by Chronolabs Co-op & The XOOPS Project - File Dumped on ".date('Y-m-d H:i')."\n\n";
+            $bfile[] = "<?php\n\n// Translation done by XTransam & ".$GLOBALS['xoopsUser']->getVar('uname')." (".$GLOBALS['xoopsUser']->getVar('email').")\n// XTransam ".($GLOBALS['xoopsModule']->getVar('version')/100)." is written by Chronolabs Co-op & The XOOPS Project - File Dumped on ".date('Y-m-d H:i')."\n\n?>";
 			@makeWritable($wpath, true);
 			if (file_exists($wpath.$file->getVar('filename')))
 				unlink($wpath.$file->getVar('filename'));
 			$file = @fopen($wpath.$file->getVar('filename'), 'w');
-			$buffer = implode('', $bfile);
+			$buffer = implode("", $bfile);
 			fwrite($file, $buffer, strlen($buffer));
 			fclose($file);
 		}
