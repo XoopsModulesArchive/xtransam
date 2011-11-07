@@ -1,5 +1,5 @@
 <?php
-// $Id: charset_utf8.php 0005 2011-01-30 13:07:28Z timgno $
+// $Id$
 //  ------------------------------------------------------------------------ //
 //               TXMod XOOPS - Modules & Themes for XOOPS                    //
 //                    Copyright (c) 2011 txmodxoops.org                      //
