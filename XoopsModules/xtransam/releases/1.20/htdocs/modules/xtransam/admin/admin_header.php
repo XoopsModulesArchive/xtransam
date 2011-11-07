@@ -39,10 +39,10 @@ $GLOBALS['myts'] = MyTextSanitizer::getInstance();
 
 $module_handler = xoops_gethandler('module');
 $config_handler = xoops_gethandler('config');
-$GLOBALS['xoopsModule'] = $module_handler->getByDirname('xtransam');
-$GLOBALS['xoopsModuleConfig'] = $config_handler->getConfigList($GLOBALS['xoopsModule']->getVar('mid')); 
+$GLOBALS['xtransamModule'] = $module_handler->getByDirname('xtransam');
+$GLOBALS['xtransamModuleConfig'] = $config_handler->getConfigList($GLOBALS['xtransamModule']->getVar('mid')); 
 
-set_time_limit($GLOBALS['xoopsModuleConfig']['php_execute_for']);
+set_time_limit($GLOBALS['xtransamModuleConfig']['php_execute_for']);
 
 xoops_load('pagenav');	
 xoops_load('xoopslists');
@@ -60,14 +60,14 @@ if ( file_exists($GLOBALS['xoops']->path('/Frameworks/moduleclasses/moduleadmin/
         echo xoops_error("Error: You don't use the Frameworks \"admin module\". Please install this Frameworks");
         //return false;
     }
-$pathImageIcon = XOOPS_URL .'/'. $GLOBALS['xoopsModule']->getInfo('icons16');
-$pathImageAdmin = XOOPS_URL .'/'. $GLOBALS['xoopsModule']->getInfo('icons32');
+$pathImageIcon = XOOPS_URL .'/'. $GLOBALS['xtransamModule']->getInfo('icons16');
+$pathImageAdmin = XOOPS_URL .'/'. $GLOBALS['xtransamModule']->getInfo('icons32');
 
 $myts =& MyTextSanitizer::getInstance();
 
 if ($xoopsUser) {
     $moduleperm_handler =& xoops_gethandler('groupperm');
-    if (!$moduleperm_handler->checkRight('module_admin', $GLOBALS['xoopsModule']->getVar( 'mid' ), $xoopsUser->getGroups())) {
+    if (!$moduleperm_handler->checkRight('module_admin', $GLOBALS['xtransamModule']->getVar( 'mid' ), $xoopsUser->getGroups())) {
         redirect_header(XOOPS_URL, 1, _NOPERM);
         exit();
     }
