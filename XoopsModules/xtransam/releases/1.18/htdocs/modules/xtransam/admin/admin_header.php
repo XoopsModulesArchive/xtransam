@@ -31,9 +31,9 @@ include_once(dirname(dirname(dirname(dirname(__FILE__)))).DIRECTORY_SEPARATOR.'m
 include_once(dirname(dirname(dirname(dirname(__FILE__)))).DS.'include'.DS.'cp_header.php');
 
 if (!defined('_CHARSET'))
-	define ("_CHARSET","UTF-8");
+	define("_CHARSET","UTF-8");
 if (!defined('_CHARSET_ISO'))
-	define ("_CHARSET_ISO","ISO-8859-1");
+	define("_CHARSET_ISO","ISO-8859-1");
 	
 $GLOBALS['myts'] = MyTextSanitizer::getInstance();
 

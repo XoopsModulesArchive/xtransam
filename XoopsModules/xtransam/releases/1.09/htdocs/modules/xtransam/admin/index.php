@@ -26,8 +26,8 @@
 //  ------------------------------------------------------------------------ //
 //  --  Author: Simon Roberts (simon@chronolabs.org.au)                   -- //
 //  ------------------------------------------------------------------------ //
-define ("_CHARSET","UTF-8");
-define ("_CHARSET_ISO","ISO-8859-1");
+define("_CHARSET","UTF-8");
+define("_CHARSET_ISO","ISO-8859-1");
 
 include 'admin_header.php';
 include_once '../include/forms.php';
