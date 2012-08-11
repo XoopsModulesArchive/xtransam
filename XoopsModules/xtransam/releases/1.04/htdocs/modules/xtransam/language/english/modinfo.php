@@ -26,10 +26,10 @@
 //  ------------------------------------------------------------------------ //
 //  --  Author: Simon Roberts (simon@chronolabs.org.au)                   -- //
 //  ------------------------------------------------------------------------ //
-	define('_XV_XTRANSAM_NAME', 'L-Translator');
-	define('_XV_XTRANSAM_DESC', 'L-Translator is used to translate language file in xoops.<br><em>Written in memory of John Miller (Microsoft Australia)</em>');	
+	define('_XV_XTRANSAM_NAME','L-Translator');
+	define('_XV_XTRANSAM_DESC','L-Translator is used to translate language file in xoops.<br><em>Written in memory of John Miller (Microsoft Australia)</em>');	
 	
-	define('_MI_XTRANSAM_ADMENU1', 'Translation Wizard');
-	define('_MI_XTRANSAM_ADMENU2', 'Do Translation');	
-	define('_MI_XTRANSAM_ADMENU3', 'Language Matrix');		
+	define('_MI_XTRANSAM_ADMENU1','Translation Wizard');
+	define('_MI_XTRANSAM_ADMENU2','Do Translation');	
+	define('_MI_XTRANSAM_ADMENU3','Language Matrix');		
 ?>

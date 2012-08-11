@@ -26,6 +26,6 @@
 //  ------------------------------------------------------------------------ //
 //  --  Author: Simon Roberts (simon@chronolabs.org.au)                   -- //
 //  ------------------------------------------------------------------------ //
-	define('_XV_XTRANSAM_NAME', 'L-Translator');
-	define('_XV_XTRANSAM_DESC', 'L-Translator is used to translate language file in xoops.<br><em>Written in memory of John Miller (Microsoft Australia)</em>');	
+	define('_XV_XTRANSAM_NAME','L-Translator');
+	define('_XV_XTRANSAM_DESC','L-Translator is used to translate language file in xoops.<br><em>Written in memory of John Miller (Microsoft Australia)</em>');	
 ?>

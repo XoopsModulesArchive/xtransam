@@ -28,20 +28,20 @@
 //  ------------------------------------------------------------------------ //
 //  --  Author: Simon Roberts (simon@chronolabs.org.au)                   -- //
 //  ------------------------------------------------------------------------ //
-	define("_XV_XTRANSAM_NAME", "L-Traduttore");
-	define("_XV_XTRANSAM_DESC", "L-Translator &#232; utilizzato per tradurre file di lingua in XOOPS. <br> <em>Scritto in memoria di John Miller (Microsoft Italia)</em>");	
+	define("_XV_XTRANSAM_NAME","L-Traduttore");
+	define("_XV_XTRANSAM_DESC","L-Translator &#232; utilizzato per tradurre file di lingua in XOOPS. <br> <em>Scritto in memoria di John Miller (Microsoft Italia)</em>");	
 	
 	// Menu 1.12 by (Timgno)
-    define("_MI_XTRANSAM_ADMENU1", "Home");
-	define("_MI_XTRANSAM_ADMENU2", "Traduzione guidata");
-	define("_MI_XTRANSAM_ADMENU3", "Fai la traduzione");
-	define("_MI_XTRANSAM_ADMENU4", "Matrice Lingua");
-	define("_MI_XTRANSAM_ADMENU5", "About");	
+    define("_MI_XTRANSAM_ADMENU1","Home");
+	define("_MI_XTRANSAM_ADMENU2","Traduzione guidata");
+	define("_MI_XTRANSAM_ADMENU3","Fai la traduzione");
+	define("_MI_XTRANSAM_ADMENU4","Matrice Lingua");
+	define("_MI_XTRANSAM_ADMENU5","About");	
 	
-	define("_XTL_STORE_METHOD", "Metodo di immagazzinaggio");
-	define("_XTL_STORE_METHODDESC", "Questo &#232; il metodo usato con i database per memorizzare la lingua");	
+	define("_XTL_STORE_METHOD","Metodo di immagazzinaggio");
+	define("_XTL_STORE_METHODDESC","Questo &#232; il metodo usato con i database per memorizzare la lingua");	
 	
-	define("_XTL_GOOGLE_APIKEY", "La tua chiave API di Google Maps");
-	define("_XTL_GOOGLE_APIKEYDESC", "Questa &#232; la tua chiave API di Google per le API &#232; possibile ottenere uno da <a href='https://code.google.com/apis/console/?api=translate&pli=1#welcome' target='_blank'>google api signup</a>");
+	define("_XTL_GOOGLE_APIKEY","La tua chiave API di Google Maps");
+	define("_XTL_GOOGLE_APIKEYDESC","Questa &#232; la tua chiave API di Google per le API &#232; possibile ottenere uno da <a href='https://code.google.com/apis/console/?api=translate&pli=1#welcome' target='_blank'>google api signup</a>");
 
 ?>
