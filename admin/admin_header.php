@@ -63,7 +63,7 @@ if ( file_exists($GLOBALS['xoops']->path('/Frameworks/moduleclasses/moduleadmin/
 $pathImageIcon = XOOPS_URL .'/'. $GLOBALS['xtransamModule']->getInfo('icons16');
 $pathImageAdmin = XOOPS_URL .'/'. $GLOBALS['xtransamModule']->getInfo('icons32');
 
-$myts =& MyTextSanitizer::getInstance();
+$myts = MyTextSanitizer::getInstance();
 
 if ($xoopsUser) {
     $moduleperm_handler =& xoops_gethandler('groupperm');
